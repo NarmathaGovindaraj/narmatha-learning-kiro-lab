@@ -31,5 +31,11 @@ if os.path.exists(data_path):
         print("Data Quality Warning: total_purchases must be a number.")
     else:
         print(f"total_purchases '{total_purchases}' passed validation.")
+
+    full_name = customer.get("full_name", "")
+    if not full_name or not full_name.strip():
+        print("Critical Error: Missing Customer Name.")
+    else:
+        print(f"full_name '{full_name}' passed validation.")
 else:
     print(f"Error: Could not find data at '{data_path}'")
