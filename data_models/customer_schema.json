@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Customer",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name of the customer"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Customer's email address"
+    },
+    "total_purchases": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Total amount spent by the customer"
+    },
+    "last_login_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the customer last logged in (YYYY-MM-DD)"
+    }
+  },
+  "required": ["name", "email", "total_purchases", "last_login_date"]
+}
