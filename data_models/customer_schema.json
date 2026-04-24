@@ -3,7 +3,7 @@
   "title": "Customer",
   "type": "object",
   "properties": {
-    "name": {
+    "full_name": {
       "type": "string",
       "description": "Full name of the customer"
     },
